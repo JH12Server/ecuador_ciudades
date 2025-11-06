@@ -1,0 +1,15 @@
+{% extends 'ciudades/base.html' %}
+{% block content %}
+<h1>{{ ciudad.nombre }}</h1>
+<p><strong>Región:</strong> {{ ciudad.region }}</p>
+<p><strong>Población:</strong> {{ ciudad.poblacion|floatformat:0 }}</p>
+<p><strong>Lugares turísticos:</strong></p>
+<ul>
+    {% for lugar in ciudad.lugares_turisticos|split:"," %}
+        <li>{{ lugar|strip }}</li>
+    {% empty %}
+        <li>No hay lugares turísticos registrados.</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'ciudad_list' %}" class="btn btn-secondary">Volver</a>
+{% endblock %}
