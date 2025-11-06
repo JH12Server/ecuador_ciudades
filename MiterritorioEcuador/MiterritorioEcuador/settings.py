@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-8_#&pi(-s3&q_o(v+)9!%8ousc!luqglbe%92xg@75=tvsk#-u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.up.railway.app', 'localhost']
+ALLOWED_HOSTS = ['.up.railway.app', ]
 
 
 # Application definition
@@ -121,6 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
