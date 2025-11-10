@@ -1,1 +1,1 @@
-web: gunicorn MiterritorioEcuador.wsgi
+web: gunicorn MiteritorioEcuador.wsgi:application --bind 0.0.0.0:$PORT
